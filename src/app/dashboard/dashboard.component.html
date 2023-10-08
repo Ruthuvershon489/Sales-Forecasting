@@ -1,0 +1,13 @@
+<div class="incoming">
+
+    <h1><b> <i> Dataset Uploading page </i></b>  </h1>
+                                                
+    <input class = "form-control"  type="file" [accept]="'.csv'" (change)="onChange($event)" required> <br>
+    <input type="number" #box (keyup) = "getVal(box.value)" placeholder="Enter months" required> <br> Enter the period to predict <br> <br>
+    <button class="btn btn-success" type="submit" value="submit" (click) = "submit()" > Let's Go.. </button> <br><br>
+
+    <div class="container" *ngIf="loading">
+        <h3>Loading ... </h3>
+    </div>
+
+</div>
